@@ -13,6 +13,7 @@
 		CE7B19B625155A9300621A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B19B425155A9300621A61 /* Main.storyboard */; };
 		CE7B19B825155A9400621A61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7B19B725155A9400621A61 /* Assets.xcassets */; };
 		CE7B19BB25155A9400621A61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7B19B925155A9400621A61 /* LaunchScreen.storyboard */; };
+		CE7B19C5251563B100621A61 /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B19C4251563B100621A61 /* IconPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE7B19B725155A9400621A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7B19BA25155A9400621A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7B19BC25155A9400621A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7B19C4251563B100621A61 /* IconPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		CE7B19AD25155A9300621A61 /* IconPicker */ = {
 			isa = PBXGroup;
 			children = (
-				CE7B19AE25155A9300621A61 /* AppDelegate.swift */,
-				CE7B19B025155A9300621A61 /* SceneDelegate.swift */,
+				CE7B19C32515639D00621A61 /* New Group */,
+				CE7B19C22515636B00621A61 /* Resources */,
 				CE7B19B225155A9300621A61 /* ViewController.swift */,
 				CE7B19B425155A9300621A61 /* Main.storyboard */,
+				CE7B19C4251563B100621A61 /* IconPickerViewController.swift */,
+			);
+			path = IconPicker;
+			sourceTree = "<group>";
+		};
+		CE7B19C22515636B00621A61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B19AE25155A9300621A61 /* AppDelegate.swift */,
+				CE7B19B025155A9300621A61 /* SceneDelegate.swift */,
 				CE7B19B725155A9400621A61 /* Assets.xcassets */,
 				CE7B19B925155A9400621A61 /* LaunchScreen.storyboard */,
 				CE7B19BC25155A9400621A61 /* Info.plist */,
 			);
-			path = IconPicker;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE7B19C32515639D00621A61 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +160,7 @@
 				CE7B19B325155A9300621A61 /* ViewController.swift in Sources */,
 				CE7B19AF25155A9300621A61 /* AppDelegate.swift in Sources */,
 				CE7B19B125155A9300621A61 /* SceneDelegate.swift in Sources */,
+				CE7B19C5251563B100621A61 /* IconPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6Z79X946M;
-				INFOPLIST_FILE = IconPicker/Info.plist;
+				INFOPLIST_FILE = IconPicker/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6Z79X946M;
-				INFOPLIST_FILE = IconPicker/Info.plist;
+				INFOPLIST_FILE = IconPicker/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

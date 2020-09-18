@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,111 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IconPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RII-l6-iLr">
+                                <rect key="frame" x="24" y="523" width="366" height="30"/>
+                                <state key="normal" title="Pick an icon"/>
+                                <connections>
+                                    <segue destination="xv5-zY-kCb" kind="show" id="Bwf-t2-zjy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon Picker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-ae-IVP">
+                                <rect key="frame" x="24" y="68" width="366" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qNx-xy-QaP">
+                                <rect key="frame" x="24" y="133" width="366" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qNx-xy-QaP" secondAttribute="height" multiplier="1:1" id="iWU-H4-7j1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bg4-ae-IVP" secondAttribute="trailing" constant="24" id="50O-Vr-F6j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qNx-xy-QaP" secondAttribute="trailing" constant="24" id="7ia-9U-Prf"/>
+                            <constraint firstItem="Bg4-ae-IVP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Ay3-Cw-vj4"/>
+                            <constraint firstItem="RII-l6-iLr" firstAttribute="top" secondItem="qNx-xy-QaP" secondAttribute="bottom" constant="24" id="BL6-h7-f3S"/>
+                            <constraint firstItem="RII-l6-iLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="KUS-my-7VM"/>
+                            <constraint firstItem="qNx-xy-QaP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Lab-Dm-3Fl"/>
+                            <constraint firstItem="RII-l6-iLr" firstAttribute="top" secondItem="qNx-xy-QaP" secondAttribute="bottom" constant="24" id="LkZ-61-dwM"/>
+                            <constraint firstItem="qNx-xy-QaP" firstAttribute="top" secondItem="Bg4-ae-IVP" secondAttribute="bottom" constant="24" id="Yiq-V8-C5q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RII-l6-iLr" secondAttribute="trailing" constant="24" id="rlb-65-9iK"/>
+                            <constraint firstItem="Bg4-ae-IVP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="tdo-uy-5sN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="iconImageView" destination="qNx-xy-QaP" id="5Iu-Za-zEQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="118"/>
+        </scene>
+        <!--Icon Picker View Controller-->
+        <scene sceneID="boF-yh-6y2">
+            <objects>
+                <viewController id="xv5-zY-kCb" customClass="IconPickerViewController" customModule="IconPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5t-yY-khh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9kW-eg-Ive">
+                                <rect key="frame" x="24" y="24" width="366" height="760"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRB-Qe-UUX">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="250"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="pencil.and.outline" catalog="system"/>
+                                        <connections>
+                                            <action selector="lassoButtonTapped:" destination="xv5-zY-kCb" eventType="touchUpInside" id="ga8-mC-MWr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53v-Oj-3tf">
+                                        <rect key="frame" x="0.0" y="255" width="366" height="250"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="trash.slash" catalog="system"/>
+                                        <connections>
+                                            <action selector="trashButtonTapped:" destination="xv5-zY-kCb" eventType="touchUpInside" id="aBE-i1-lNj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWU-oS-FW7">
+                                        <rect key="frame" x="0.0" y="509" width="366" height="251"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="square.and.arrow.up" catalog="system"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="xv5-zY-kCb" eventType="touchUpInside" id="Spa-WU-G7U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9kW-eg-Ive" firstAttribute="top" secondItem="nKI-FH-Wkd" secondAttribute="top" constant="24" id="0kt-n7-vUg"/>
+                            <constraint firstItem="9kW-eg-Ive" firstAttribute="leading" secondItem="nKI-FH-Wkd" secondAttribute="leading" constant="24" id="19H-IZ-gt2"/>
+                            <constraint firstItem="nKI-FH-Wkd" firstAttribute="trailing" secondItem="9kW-eg-Ive" secondAttribute="trailing" constant="24" id="Fnt-L5-K53"/>
+                            <constraint firstItem="nKI-FH-Wkd" firstAttribute="bottom" secondItem="9kW-eg-Ive" secondAttribute="bottom" constant="24" id="y40-t8-usn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nKI-FH-Wkd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="G6O-71-7Er"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pbi-RA-Rmr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pencil.and.outline" catalog="system" width="128" height="119"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="trash.slash" catalog="system" width="121" height="128"/>
+    </resources>
 </document>
